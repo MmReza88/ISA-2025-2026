@@ -57,7 +57,7 @@ begin  -- beh
   B10 <= conv_std_logic_vector(-1, NBIT);
 
   process (CLK, RST_n)
-    file fp_in : text open READ_MODE is "./samples.txt";
+    file fp_in : text open READ_MODE is "./Fir_01/samples.txt";
     variable line_in : line;
     variable x : integer;
   begin  -- process
@@ -70,7 +70,7 @@ begin  -- beh
         if (valid = '1') then
           readline(fp_in, line_in);
           read(line_in, x);
-          DOUT <= conv_std_logic_vector(x, 16) after tco;
+          DOUT <= conv_std_logic_vector(x, 9) after tco;
           VOUT <= '1' after tco;
           sEndSim <= '0' after tco;          
         else

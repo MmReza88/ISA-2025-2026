@@ -93,7 +93,7 @@ begin
 			FF(7) <= FF(6);
 			FF(8) <= FF(7);
 			FF(9) <= FF(8);
-			FF_Dout <= Adder(9)(9 downto 1);
+			FF_Dout <= Adder(9)(8 downto 0);
 		
 		end if ;
 	end process;
