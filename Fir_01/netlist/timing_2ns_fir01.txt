@@ -1,0 +1,95 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Fir_01
+Version: S-2021.06-SP4
+Date   : Mon Oct 13 16:58:34 2025
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: FF_reg[5][1]
+              (rising edge-triggered flip-flop clocked by my clk)
+  Endpoint: FF_Dout_reg[8]
+            (rising edge-triggered flip-flop clocked by my clk)
+  Path Group: my clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Fir_01             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock my clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FF_reg[5][1]/CK (DFFR_X1)                               0.00       0.00 r
+  FF_reg[5][1]/QN (DFFR_X1)                               0.06       0.06 f
+  U16/ZN (INV_X1)                                         0.04       0.11 r
+  mult_107/a[1] (Fir_01_DW_mult_tc_4)                     0.00       0.11 r
+  mult_107/U239/Z (BUF_X1)                                0.05       0.16 r
+  mult_107/U438/ZN (NAND2_X1)                             0.06       0.22 f
+  mult_107/U436/ZN (OAI22_X1)                             0.06       0.28 r
+  mult_107/U303/ZN (AND3_X1)                              0.06       0.34 r
+  mult_107/U301/Z (MUX2_X1)                               0.05       0.39 r
+  mult_107/U256/ZN (NAND2_X1)                             0.03       0.41 f
+  mult_107/U258/ZN (AND3_X1)                              0.05       0.46 f
+  mult_107/U300/ZN (OAI222_X1)                            0.05       0.51 r
+  mult_107/U296/ZN (INV_X1)                               0.03       0.54 f
+  mult_107/U298/ZN (OAI222_X1)                            0.06       0.60 r
+  mult_107/U267/ZN (AND2_X1)                              0.06       0.66 r
+  mult_107/U269/ZN (NOR3_X1)                              0.03       0.68 f
+  mult_107/U281/ZN (OAI222_X1)                            0.08       0.76 r
+  mult_107/U277/ZN (NAND2_X1)                             0.04       0.81 f
+  mult_107/U229/ZN (NAND3_X1)                             0.04       0.85 r
+  mult_107/U262/ZN (NAND2_X1)                             0.04       0.89 f
+  mult_107/U214/ZN (NAND3_X1)                             0.04       0.92 r
+  mult_107/U247/ZN (XNOR2_X1)                             0.06       0.98 r
+  mult_107/product[10] (Fir_01_DW_mult_tc_4)              0.00       0.98 r
+  add_5_root_add_0_root_add_135/A[2] (Fir_01_DW01_add_3)
+                                                          0.00       0.98 r
+  add_5_root_add_0_root_add_135/U1_2/S (FA_X1)            0.12       1.11 f
+  add_5_root_add_0_root_add_135/SUM[2] (Fir_01_DW01_add_3)
+                                                          0.00       1.11 f
+  add_4_root_add_0_root_add_135/B[2] (Fir_01_DW01_add_2)
+                                                          0.00       1.11 f
+  add_4_root_add_0_root_add_135/U1_2/CO (FA_X1)           0.10       1.21 f
+  add_4_root_add_0_root_add_135/U1_3/CO (FA_X1)           0.09       1.30 f
+  add_4_root_add_0_root_add_135/U1_4/CO (FA_X1)           0.09       1.39 f
+  add_4_root_add_0_root_add_135/U1_5/CO (FA_X1)           0.09       1.48 f
+  add_4_root_add_0_root_add_135/U1_6/CO (FA_X1)           0.09       1.57 f
+  add_4_root_add_0_root_add_135/U1_7/CO (FA_X1)           0.09       1.66 f
+  add_4_root_add_0_root_add_135/U1_8/S (FA_X1)            0.14       1.80 r
+  add_4_root_add_0_root_add_135/SUM[8] (Fir_01_DW01_add_2)
+                                                          0.00       1.80 r
+  add_1_root_add_0_root_add_135/A[8] (Fir_01_DW01_add_1)
+                                                          0.00       1.80 r
+  add_1_root_add_0_root_add_135/U1_8/S (FA_X1)            0.12       1.92 f
+  add_1_root_add_0_root_add_135/SUM[8] (Fir_01_DW01_add_1)
+                                                          0.00       1.92 f
+  add_0_root_add_0_root_add_135/B[8] (Fir_01_DW01_add_0)
+                                                          0.00       1.92 f
+  add_0_root_add_0_root_add_135/U1_8/S (FA_X1)            0.14       2.06 r
+  add_0_root_add_0_root_add_135/SUM[8] (Fir_01_DW01_add_0)
+                                                          0.00       2.06 r
+  FF_Dout_reg[8]/D (DFFR_X1)                              0.01       2.07 r
+  data arrival time                                                  2.07
+
+  clock my clk (rise edge)                                2.10       2.10
+  clock network delay (ideal)                             0.00       2.10
+  FF_Dout_reg[8]/CK (DFFR_X1)                             0.00       2.10 r
+  library setup time                                     -0.03       2.07
+  data required time                                                 2.07
+  --------------------------------------------------------------------------
+  data required time                                                 2.07
+  data arrival time                                                 -2.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
