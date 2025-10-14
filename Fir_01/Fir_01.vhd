@@ -55,9 +55,6 @@ architecture Behavioral of Fir_01 is
 			signal Adder : Adder_array;
 			
 			
-			
-			
-			
 begin
 	
 	
