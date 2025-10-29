@@ -51,10 +51,10 @@ module tb_fir ();
 		.END_SIM(END_SIM_i)
 	);
 
-   Fir_01 UUT
+   myfir UUT
 	(
 		.CLK(CLK_i),
-		.RST_n(RST_n_i),
+		.RST(RST_n_i),
 		.DIN(DIN_i),
 		.VIN(VIN_i),
 		.B0(B0_i),
@@ -69,7 +69,7 @@ module tb_fir ();
 		.B9(B9_i),
 		.B10(B10_i),
 		.DOUT(DOUT_i),
-		.VOUT(VOUT_i)
+		.Vout(VOUT_i)
 	);
 
    data_sink DS

@@ -57,7 +57,7 @@ begin  -- beh
   B10 <= conv_std_logic_vector(-1, NBIT);
 
   process (CLK, RST_n)
-    file fp_in : text open READ_MODE is "./Fir_01/samples.txt";
+    file fp_in : text open READ_MODE is "../sim/samples.txt";
     variable line_in : line;
     variable x : integer;
   begin  -- process

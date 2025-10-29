@@ -22,6 +22,7 @@ set_output_delay 0.5 -max -clock my_clk [all_outputs]
 set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
 set_load $OLOAD [all_outputs]
 
+#compile -gate clock#
 compile -exact_map
 write -hierarchy -format ddc -output ../netlist/fir01.ddc
 write -hierarchy -format vhdl -output ../netlist/fir01.vhdl
